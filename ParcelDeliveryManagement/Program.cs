@@ -3,6 +3,7 @@ using ParcelDeliveryBusinessLogic.Services;
 using ParcelDeliveryBusinessLogic.Properties;
 using ParcelDeliveryBusinessLogic.Processor;
 using System.ComponentModel;
+using Unity;
 
 namespace ParcelDist.ConsoleApp
 {
@@ -12,10 +13,14 @@ namespace ParcelDist.ConsoleApp
         static void Main(string[] args)
         {
             var parContainer = XMLUtility.LoadXml<ParContainer>(XmlFilePath);
-            var defaultOrganization = CreateOrganization();
+            var container = new UnityContainer();
+            container.RegisterType<IOrganization, Organization>();
+            var organization = container.Resolve<IOrganization>();
+            organization.Departments = new List<Department> { new InsuranceDepartment(), new EmailDepartment(), new RegularDepartment(), new HeavyDepartment(), new AddDepartment() };
+            //var defaultOrganization = CreateOrganization();
 
             Console.WriteLine($"************** {parContainer.Parcels.Count} Parcels is ready to process **************");
-            Process(defaultOrganization, parContainer);
+            Process(organization, parContainer);
 
             Console.WriteLine();
             Console.WriteLine("*************************     Done!    *************************");
@@ -23,7 +28,7 @@ namespace ParcelDist.ConsoleApp
 
         }
 
-        private static void Process(Organization organization, ParContainer container)
+        private static void Process(IOrganization organization, ParContainer container)
         {
             var service = new ParcelDistributionService();
 
@@ -34,19 +39,20 @@ namespace ParcelDist.ConsoleApp
                 Thread.Sleep(3000);//Just for simulation
             }
         }
-        private static Organization CreateOrganization()
-        {
-            return new Organization
-            {
-                Departments = new List<Department>
-                {
-                    new InsuranceDepartment(),
-                    new EmailDepartment(),
-                    new RegularDepartment(),
-                    new HeavyDepartment(),
-                    new AddDepartment()
-                }
-            };
+        private static IOrganization CreateOrganization(IOrganization organization)
+       {
+            return organization;
+//            return new Organization
+//            {
+//                Departments = new List<Department>
+//                {
+//                    new InsuranceDepartment(),
+//                    new EmailDepartment(),
+//                    new RegularDepartment(),
+//                    new HeavyDepartment(),
+//                    new AddDepartment()
+//                }
+//};
         }
     }
 }

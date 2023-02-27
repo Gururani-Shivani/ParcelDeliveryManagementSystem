@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParcelDeliveryBusinessLogic.Properties
 {
-    public abstract class Department
+    public abstract class Department: IDepartment
     {
         public abstract bool Evaluate(Parcel parcel);
         protected void ShowParcelInfo(Parcel parcel)
@@ -30,6 +30,12 @@ namespace ParcelDeliveryBusinessLogic.Properties
             ShowParcelInfo(parcel);
             Console.WriteLine($"{this.GetType().Name} Processed the parcel.");
         }
+        public void ProcessParcel(Parcel parcel)
+        {
+            ShowParcelInfo(parcel);
+            Console.WriteLine($"{this.GetType().Name} Processed the parcel.");
+        }
+
     }
 
     public class RegularDepartment : Department, IParcelProcess

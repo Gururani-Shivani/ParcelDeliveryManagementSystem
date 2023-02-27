@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ParcelDeliveryManagement": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
