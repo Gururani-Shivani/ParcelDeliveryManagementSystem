@@ -9,7 +9,7 @@ namespace ParcelDeliveryBusinessLogic.Services
 {
     public class ParcelDistributionService
     {
-        public ParcelDeliveryResult Send(Organization organization, Parcel parcel)
+        public ParcelDeliveryResult Send(IOrganization organization, Parcel parcel)
         {
             var result = new ParcelDeliveryResult();
 

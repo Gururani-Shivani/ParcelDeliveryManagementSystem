@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelDeliveryManagement", "ParcelDeliveryManagement\ParcelDeliveryManagement.csproj", "{3439F362-FA53-4265-8571-80AFE9239310}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelDeliveryManagement", "ParcelDeliveryManagement\ParcelDeliveryManagement.csproj", "{3439F362-FA53-4265-8571-80AFE9239310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelDeliveryBusinessLogic", "ParcelDeliveryBusinessLogic\ParcelDeliveryBusinessLogic.csproj", "{15DB1FB9-41A6-4A90-902A-4BE9B46060AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelDeliveryBusinessLogic", "ParcelDeliveryBusinessLogic\ParcelDeliveryBusinessLogic.csproj", "{15DB1FB9-41A6-4A90-902A-4BE9B46060AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelDeliveryManagement.UnitTests", "ParcelDeliveryManagement.UnitTests\ParcelDeliveryManagement.UnitTests.csproj", "{2CFE2F0A-253F-4F26-8CE4-992F9DC7F6F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelDeliveryManagement.UnitTests", "ParcelDeliveryManagement.UnitTests\ParcelDeliveryManagement.UnitTests.csproj", "{2CFE2F0A-253F-4F26-8CE4-992F9DC7F6F0}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0B7723BE-94EC-4E29-8CD9-ECE61939D920}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2CFE2F0A-253F-4F26-8CE4-992F9DC7F6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CFE2F0A-253F-4F26-8CE4-992F9DC7F6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CFE2F0A-253F-4F26-8CE4-992F9DC7F6F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B7723BE-94EC-4E29-8CD9-ECE61939D920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B7723BE-94EC-4E29-8CD9-ECE61939D920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B7723BE-94EC-4E29-8CD9-ECE61939D920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B7723BE-94EC-4E29-8CD9-ECE61939D920}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

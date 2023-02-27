@@ -16,7 +16,7 @@ namespace FM.ParcelDist.UnitTests
 
             #region Act
 
-            var container = XMLUtilityTest.LoadXml<ParContainer>(xmlFilePath);
+            var container = XMLUtility.LoadXml<ParContainer>(xmlFilePath);
 
             #endregion
 
@@ -27,6 +27,11 @@ namespace FM.ParcelDist.UnitTests
             Assert.Equal(68465468, container.Id);
 
             #endregion
+        }
+
+        private static object LoadXml<T>(string xmlFilePath)
+        {
+            throw new NotImplementedException();
         }
     }
 }

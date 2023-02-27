@@ -3,8 +3,9 @@ using System.Linq;
 
 namespace ParcelDeliveryBusinessLogic.Properties
 {
-    public class Organization
+    public class Organization : IOrganization
     {
+
         public IList<Department> Departments { get; set; }
 
         public IList<Department> GetSignerDepartments()

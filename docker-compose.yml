@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  parceldeliverymanagement:
+    image: ${DOCKER_REGISTRY-}parceldeliverymanagement
+    build:
+      context: .
+      dockerfile: ParcelDeliveryManagement\Dockerfile
